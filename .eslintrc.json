@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "vue/setup-compiler-macros": true,
+    "jquery": true
+  },
+  "extends": ["eslint:recommended", "plugin:vue/essential","./.eslintrc-auto-import.json"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["vue"],
+  "rules": {
+    "semi": ["error", "never"],
+    "vue/multi-word-component-names": 0, //允许组件名字是一个单词
+    "vue/no-multiple-template-root": "off", //允许不是单一根节点
+    "indent": ["error", 2,{"SwitchCase":1}],
+    "comma-spacing": 2,
+    "comma-dangle": ["error", "never"]
+  }
+}
+  
