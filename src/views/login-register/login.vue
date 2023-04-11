@@ -1,10 +1,8 @@
 <template>
-    <div class=''>login</div>
+  <div class="login-container">222</div>
 </template>
 
 <script setup>
-import { } from 'vue'
+import {} from 'vue'
 </script>
-<style lang='scss' scoped>
-
-</style>
+<style lang="scss" scoped></style>
