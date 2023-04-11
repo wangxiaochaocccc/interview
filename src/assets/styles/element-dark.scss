@@ -1,0 +1,7 @@
+html.dark {
+  .el-header {
+    background-color: #282828;
+  }
+  img,
+  .dark-img-bg {filter:brightness(0.8) saturate(1.25)}
+}

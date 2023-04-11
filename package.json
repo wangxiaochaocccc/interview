@@ -10,6 +10,8 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^9.13.0",
     "element-plus": "^2.3.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
