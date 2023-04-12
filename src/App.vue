@@ -7,5 +7,3 @@
 <script setup>
 import HeaderVue from '@/components/header.vue'
 </script>
-
-<style lang="scss" scoped></style>

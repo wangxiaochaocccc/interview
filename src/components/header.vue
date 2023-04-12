@@ -11,8 +11,8 @@
           <m-theme></m-theme>
         </div>
         <el-space spacer="或">
-          <a>登录</a>
-          <a>注册</a>
+          <a href="/login">登录</a>
+          <a href="/login">注册</a>
         </el-space>
       </div>
     </div>
@@ -26,6 +26,7 @@ import imgUrl from '@/assets/images/logo_new1.png'
 <style lang="scss" scoped>
 .header-container {
   width: 100%;
+  min-width: 1200px;
   height: 50px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   // background-color: #fff;

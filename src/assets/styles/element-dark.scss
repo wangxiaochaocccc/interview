@@ -1,5 +1,6 @@
+@import './varible.scss';
+
 html.dark {
-  --bg-color:#282828;
   .el-header {
     background-color: var(--bg-color);
   }
