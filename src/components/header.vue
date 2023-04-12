@@ -5,6 +5,12 @@
         <a href="/" class="logo-box">
           <div class="logo dark-img-bg" :style="'background:url(' + imgUrl + ')'"></div>
         </a>
+        <ul class="label-type">
+          <li class="active-type">题库</li>
+          <li>讨论</li>
+          <li>课程</li>
+          <li>报错</li>
+        </ul>
       </div>
       <div class="right">
         <div class="theme-box mr-2">
@@ -44,6 +50,55 @@ import imgUrl from '@/assets/images/logo_new1.png'
         height: 40px;
         background-size: cover !important;
         border-radius: 8px;
+      }
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      .label-type {
+        height: 100%;
+        display: flex;
+        font-size: 16px;
+        margin-left: 20px;
+        li {
+          position: relative;
+          list-style: none;
+          padding: 0 10px;
+          margin-right: 15px;
+          cursor: pointer;
+          color: #999;
+          line-height: 50px;
+          font-weight: 700;
+          &.active-type {
+            position: relative;
+            color: #409eff;
+            &::after {
+              display: inline-block;
+              content: '';
+              width: 20px;
+              height: 2px;
+              background-color: #409eff;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              margin-left: -10px;
+            }
+          }
+          &:hover {
+            color: #409eff;
+          }
+          &:hover::after {
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #409eff;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -10px;
+          }
+        }
       }
     }
     .right {
