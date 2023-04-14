@@ -11,7 +11,14 @@
           </template>
         </el-input>
       </div>
-      <div class="code">
+      <div class="password" v-if="$route.query.register != 1">
+        <el-input v-model="input3" placeholder="请输入您的密码" class="input-with-select" size="large">
+          <template #prepend>
+            <el-button :icon="Lock" />
+          </template>
+        </el-input>
+      </div>
+      <div class="code" v-if="$route.query.register == 1">
         <el-input v-model="input3" placeholder="请输入您的验证码" class="input-with-select" size="large">
           <template #append>
             <span class="code-text">发送验证码</span>
@@ -21,19 +28,29 @@
       <div class="login-btn">
         <el-button type="primary" size="large">
           <el-space spacer="/">
-            <span>登录</span>
-            <span>注册</span>
+            <span v-if="$route.query.register == 1">注册</span>
+            <span v-else>登录</span>
           </el-space>
         </el-button>
+      </div>
+      <div class="forget-pwd" v-if="$route.query.register != 1">
+        <el-link type="primary">忘记密码?</el-link>
+        <span class="go-register">
+          还没注册?点击
+          <el-link type="primary">去注册</el-link>
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { Message } from '@element-plus/icons-vue'
-import {} from 'vue'
+import { Message, Lock } from '@element-plus/icons-vue'
+import { useRoute } from 'vue-router'
 import imgUrl from '@/assets/images/logo_new1.png'
+
+const route = useRoute()
+console.log(route.query)
 </script>
 <style lang="scss" scoped>
 @import '@/assets/styles/varible.scss';
@@ -58,6 +75,9 @@ import imgUrl from '@/assets/images/logo_new1.png'
     .email {
       margin-bottom: 30px;
     }
+    .password {
+      margin-bottom: 30px;
+    }
     .code {
       margin-bottom: 50px;
       .code-text {
@@ -69,6 +89,17 @@ import imgUrl from '@/assets/images/logo_new1.png'
       justify-content: center;
       .el-button {
         width: 390px;
+      }
+    }
+    .forget-pwd {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      .go-register {
+        display: inline-block;
+        display: flex;
+        align-items: center;
       }
     }
   }

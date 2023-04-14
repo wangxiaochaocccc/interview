@@ -18,7 +18,7 @@
         </div>
         <el-space spacer="或">
           <a href="/login">登录</a>
-          <a href="/login">注册</a>
+          <a href="/login?register=1">注册</a>
         </el-space>
       </div>
     </div>
