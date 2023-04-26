@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import {join} from 'path'
+import { join } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,6 +8,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': join(__dirname, '/src')
+    }
+  },
+  server: {
+    proxy: {
+      '/dev': {
+        rewrite: (path) => path.replace(/^\/dev/, ''),
+        target: 'http://yapi.imisst.com/mock/11/'
+      }
     }
   }
 })

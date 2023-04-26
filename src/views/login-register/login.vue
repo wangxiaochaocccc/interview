@@ -48,9 +48,16 @@
 import { Message, Lock } from '@element-plus/icons-vue'
 import { useRoute } from 'vue-router'
 import imgUrl from '@/assets/images/logo_new1.png'
+import { loginIn } from '@/api/user'
 
 const route = useRoute()
 console.log(route.query)
+
+const login = async () => {
+  const res = await loginIn({ repassword: 11111, password: 1111 })
+  console.log(res)
+}
+login()
 </script>
 <style lang="scss" scoped>
 @import '@/assets/styles/varible.scss';
