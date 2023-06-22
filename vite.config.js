@@ -14,7 +14,8 @@ export default defineConfig({
     proxy: {
       '/dev': {
         rewrite: (path) => path.replace(/^\/dev/, ''),
-        target: 'http://yapi.imisst.com/mock/11/'
+        target: 'http://api.imisst.com/',
+        changeOrigin: true
       }
     }
   }
